@@ -1,0 +1,42 @@
+<div class="sidebar"> 
+  <button mat-icon-button aria-label="Back" class="button" (click)="onBack()">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <h2>Transaction History</h2> 
+</div>
+
+<div class="history-page">
+  <select [(ngModel)]="selectedMonth" (change)="onMonthChange()" class="form-control">
+    <option value="" disabled>Select Month</option>
+    <option *ngFor="let month of months" [value]="month">{{ month }}</option>
+  </select>
+  <div class="Total">
+    Total Transactions: 
+       <div class="number">  ${{ totalIncome }}</div> 
+  </div>
+    <div class="canvas">
+      <canvas id="myCanvas" width="400" height="400"></canvas>
+    </div>
+    
+    <h3> History </h3>
+  <div class="card-container">
+  <div class="transaction-list" *ngFor="let transaction of filteredTransactions">
+    <mat-card class="list"> 
+      <span class="transaction-item">
+        <mat-icon class="circle-icon">circle</mat-icon>
+        <span class="description">
+          {{ transaction.source || transaction.expenseType }}
+        </span>
+      </span>
+      <span class="history-item">
+        <mat-icon class="date-icon">calendar_today</mat-icon>
+        <span class="date">{{ transaction.date | date }}</span>
+        <mat-icon class="money-icon">attach_money</mat-icon>
+        <span class="amount">
+          {{ transaction.amount || transaction.expenseAmount | currency }}
+        </span>
+      </span>
+    </mat-card>
+  </div>
+</div>
+</div>

@@ -1,0 +1,154 @@
+.sidebar{
+    background: linear-gradient(135deg, #008080, #80ced6);
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    color: #ffffff;
+    width: 99%;
+    margin-bottom: 15px;
+  }
+  
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+ 
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px;
+    width: calc(100% - 40%); 
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto; 
+}
+
+.card {
+    position: relative;
+    width: calc(50% - 40px); /* Default width (3 cards per row) */
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 700px;
+    min-height: 300px;
+    margin: 40px;
+    transition: transform 0.3s ease;
+    box-sizing: border-box; /* Include padding in width */
+    flex-grow: 2; /* Allow cards to grow */
+    display: flex; /* Make card a flex container */
+    flex-direction: column; /* Arrange content vertically */
+    background-color: #daf1f6ec;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.mat-icon{
+    font-size: 24px;
+}
+
+.income-icon{
+    background-color: #e2ce9c;
+}
+
+.expense-icon{
+    background-color: #be7886;
+}
+
+.total-icon{
+    background-color: #8dcda9;
+}
+
+.todo-icon{
+    background-color: #87dcdc;
+}
+
+.trans-icon{
+    background-color: #f1afd9;
+}
+
+.total-item{
+    display: flex;
+    align-items: center;
+}
+
+.total-item p{
+    margin-left: 10px;
+}
+
+h3{
+    color: #555;
+    font-size: 16px;
+    margin: 0;
+}
+
+p{
+    color: #333;
+    font-size: 14px;
+    margin: 0;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+
+.button {
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    background: linear-gradient(135deg, #008080, #80ced6);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    align-self: flex-end; 
+}
+
+.button:hover{
+    background: #80ced6;
+}
+/* Media Queries */
+@media (max-width: 992px) {
+    .card {
+        width: calc(50% - 40px); /* 2 cards per row */
+    }
+}
+
+@media (max-width: 768px) { /* Mobile */
+    .card {
+        width: 100%; /* 1 card per row */
+        max-width: none; /* Remove max-width on mobile */
+    }
+    .card-container {
+        width: 100%; /* Take full width on mobile */
+    }
+}

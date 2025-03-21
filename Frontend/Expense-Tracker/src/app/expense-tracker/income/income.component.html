@@ -1,0 +1,83 @@
+<div class="sidebar"> 
+    <h2>Income</h2> 
+</div> 
+
+<div class="main-container"> 
+    <div class="total-income"> 
+        Total Income For {{ selectedMonth }}: 
+        <div class="number">${{ calculateTotalIncome() }}</div> 
+    </div> 
+    <div class="container"> 
+        <div class="column"> 
+            <form [formGroup]="incomeForm" (ngSubmit)="onSubmit()" class="input-form"> 
+                <div class="form-group"> 
+                    <select formControlName="month" id="month" class="form-control" (change)="onChange($event)"> 
+                        <option value="" disabled>Select Income Month</option> 
+                        <option value="January">January</option> 
+                        <option value="February">February</option> 
+                        <option value="March">March</option> 
+                        <option value="April">April</option> 
+                        <option value="May">May</option> 
+                        <option value="June">June</option> 
+                        <option value="July">July</option> 
+                        <option value="August">August</option> 
+                        <option value="September">September</option> 
+                        <option value="October">October</option> 
+                        <option value="November">November</option> 
+                        <option value="December">December</option> 
+                    </select> 
+                </div> 
+                <div class="form-group"> 
+                    <label for="date"></label> 
+                    <input type="date" formControlName="date" id="date" class="form-control" placeholder="Choose a date" [class.disabled-dropdown]="!monthSelected"> 
+                </div> 
+                <div class="form-group"> 
+                    <label for="Source"> </label> 
+                    <select formControlName="source" id="source" class="form-control"> 
+                        <option value="" disabled>Select Source of Income</option> 
+                        <option value="Salary">Salary</option> 
+                        <option value="Freelancing">Freelancing</option> 
+                        <option value="Gifts">Gifts</option> 
+                        <option value="Bonus">Bonus</option>  
+                    </select> 
+                </div> 
+                <div class="form-group"> 
+                    <input type="number" formControlName="amount" id="amount" class="form-control" placeholder="Enter amount"> 
+                </div> 
+                <button type="submit" class="btn-primary"> 
+                    <mat-icon class="add-icon">add</mat-icon> Add Income 
+                </button>
+             </form> 
+            </div> 
+            
+            
+            <div class="column"> 
+                <div class="card-container"> 
+                    <div class="card"> 
+                        <div class="card-header"> 
+                            <span class="icon list-icon"><mat-icon>list</mat-icon></span> 
+                            <h3>Income List - {{ selectedMonth }}</h3> 
+                        </div> 
+                    </div> 
+                    <div class="column" *ngFor="let income of getFilteredIncomes()"> 
+                        <mat-card class="list"> 
+                            <span class="income-item"> 
+                                <mat-icon class="circle-icon">circle</mat-icon> 
+                                <span class="income-source">{{ income.source }}</span> 
+                            </span> 
+                            <span class="income-item"> 
+                                <mat-icon class="date-icon">calendar_today</mat-icon> 
+                                <span class="income-date">{{ income.date | date: 'dd MMM yyyy' }}</span> 
+                                <mat-icon class="money-icon">attach_money</mat-icon> 
+                                <span class="income-amount">{{ income.amount }}</span> 
+                            </span> 
+                        </mat-card> 
+                    </div> 
+                    <div class="input-form"> 
+                        <button class="btn-primary" (click)="onBack()">Back</button> 
+                        <button class="btn-primary" (click)="saveForm()">Save</button> 
+                    </div> 
+                </div> 
+            </div> 
+    </div> 
+</div> 

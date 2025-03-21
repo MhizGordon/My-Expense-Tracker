@@ -1,0 +1,31 @@
+<!-- Sidebar displaying the application name -->
+<div class="sidebar">
+</div>
+
+<!-- Toggle button to open or close the slide-out panel -->
+<div>
+    <div class="toggle-button-row" (click)="toggleSlideOut()">
+        <mat-icon>menu</mat-icon> <!-- Menu icon for toggling the slide-out panel -->
+    </div>
+</div>
+
+<!-- Slide-out navigation panel -->
+<div class="slide-out-panel" [class.slide-out]="isSlideOut">
+    <div class="slide-out-content">
+        <!-- Panel header containing navigation options -->
+        <div class="slide-out-header">
+            <h3 class="nav"> APP </h3>
+
+            <!-- Navigation links with icons -->
+            <p class="edit-col" (click)="onDash()"> 
+                <mat-icon>dashboard</mat-icon> Dashboard 
+            </p>
+            <p class="edit-col" (click)="onHistory()"> 
+                <mat-icon>history</mat-icon> History 
+            </p>
+            <p class="edit-col" (click)="onLogout()"> 
+                <mat-icon>logout</mat-icon> Logout 
+            </p>
+        </div>
+    </div>
+</div>

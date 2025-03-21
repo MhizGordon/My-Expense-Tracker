@@ -1,0 +1,135 @@
+.sidebar{
+    background: linear-gradient(135deg, #008080, #80ced6);
+    padding: 5px 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 20px;
+    color: #ffffff;
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 15px;
+    
+  }
+
+  .button {
+  color: #ffffff;
+  margin-right: 35% ;
+}
+
+
+  .form-control{
+    padding: 10px;
+    border:2px solid white;
+    transition: border-color 0.3s ease;
+    font-size: 16px;
+    background-color: #dff7fb;
+    display: flex;
+    width: 40%;
+    margin-left: 30%;
+    margin-bottom: 30px;
+  }
+
+  .Total{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1px;
+    font-size: 25px;
+    }
+
+   .number{
+      color: rgb(48, 111, 248);
+      font-size: 35px;
+    }
+
+    h3{
+      background: linear-gradient(135deg, #008080, #80ced6);
+      padding: 10px 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px;
+      color: #ffffff;
+      width: 60%;
+      margin-left: 20%;
+      margin-bottom: 15px;
+      margin-top: 20px;
+    }
+
+    .card-container {
+       /* Enables flexbox */
+      flex-direction: column; /* Stacks cards vertically */
+      align-items: center; /* Centers items horizontally */
+      justify-content: center;
+      width: 95%; /* Ensures it takes full width */
+      max-width: 1000px; /* Optional: limits width */
+      margin: 0 auto; /* Centers the container */
+      padding: 20px;
+      background-color: #e3f0f0;/* Light background for visibility */
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .list{
+      width: 95%;
+      max-width: 1200px;
+      color: #023d43;
+      background-color: #def9fd;
+      position: relative;
+      padding: 15px;
+      appearance: outlined;
+      margin: 15px;
+      padding: 10px;
+      border-radius: 15px;
+      display: flex;
+      border: 2px solid;
+      border: 2px solid white;
+    }
+  
+    .history-item{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-start;
+      margin: 10px;
+    }
+  
+    .date-icon{
+      color: #23a8f0;
+      margin: 3px;
+      margin-right: 5px;
+    }
+
+    .money-icon{
+      color: #17b76c;
+    }
+
+    .circle-icon{
+      height: 5px;
+      width: 5px;
+      color: #eb93ee;
+      margin: 10px;
+    }
+
+    .date{
+      margin-right: 30px;
+    }
+
+  .btn-primary{
+    background: linear-gradient(135deg, #008080, #80ced6);
+    color: #ffffff;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .btn-primary:hover{
+    background: #80ced6;
+  }

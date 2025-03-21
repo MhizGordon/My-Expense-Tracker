@@ -1,0 +1,80 @@
+.sidebar{
+    background: linear-gradient(135deg, #008080, #80ced6);
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    color: #ffffff;
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 15px;
+  }
+
+  .Add-savings {
+    padding: 20px;
+    display: flex;
+    background: #f7f8f8;
+
+  }
+  
+  .add-savings-card{
+   padding: 20px;
+   background-color: #edf2f3;
+  }
+
+.input-form .form-control{
+    padding: 12px;
+    border:2px solid white;
+    transition: border-color 0.3s ease;
+    font-size: 16px;
+    background-color: #dff7fb;
+    display: flex;
+    width: 400px;
+    flex: 1;
+    
+  }
+
+.input-form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+.btn-primary{
+    background: linear-gradient(135deg, #008080, #80ced6);
+    color: #ffffff;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 300px;
+  }
+  
+.btn-primary:hover{
+    background: #80ced6;
+  }
+
+.buttons{
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.total-savings{
+    color: #056284;
+    font-size: larger;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}

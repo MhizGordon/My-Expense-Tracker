@@ -1,0 +1,87 @@
+<app-sidebar></app-sidebar>
+
+<div class="sidebar"> 
+  <h2>Expense Tracker</h2> 
+</div>
+
+<div class="container">
+  <div class="card-container">
+    <!-- Income Card -->
+    <div class="card">
+      <div class="card-header">
+        <span class="icon income-icon">
+          <mat-icon>attach_money</mat-icon>
+        </span>
+        <h2>Income</h2>
+      </div>
+      <hr>
+      <div class="income-details">
+        <div class="month">
+          <h3>Last Few Months</h3>
+          <ul>
+            <li *ngFor="let incomeRecord of lastThreeMonthsIncome"> 
+              {{ incomeRecord.month }} : ${{ incomeRecord.amount }}
+            </li>
+          </ul>
+        </div>
+        <div class="month">
+          <h3>Current Month</h3>
+          <p>{{ currentMonthIncome }}</p>
+        </div>
+        <button class="button" (click)="onIncome()">View</button>
+      </div>
+    </div>
+
+    <!-- Expense Card -->
+    <div class="card">
+      <div class="card-header">
+        <span class="icon expense-icon">
+          <mat-icon>money_off</mat-icon>
+        </span>
+        <h2>Expense</h2>
+      </div>
+      <hr>
+      <div class="expense-details">
+        <div class="month">
+          <h3>Last Few Months</h3>
+          <ul>
+            <li *ngFor="let expenseRecord of lastThreeMonthsExpense">
+              {{ expenseRecord.month }} : ${{ expenseRecord.expenseAmount }}
+            </li>
+          </ul>
+        </div>
+        <div class="month">
+          <h3>Current Month</h3>
+          <p>{{ currentMonthExpense }}</p>
+        </div>
+        <button class="button" (click)="onExpense()">View</button>
+      </div>
+    </div>
+
+    <!-- Savings Card -->
+    <div class="card">
+      <div class="card-header">
+        <span class="icon trans-icon">
+          <mat-icon>account_balance_wallet</mat-icon>
+        </span>
+        <h2>Savings</h2>
+      </div>
+      <hr>
+      <div class="savings-details">
+        <div class="month">
+          <h3>Last Few Months</h3>
+          <ul>
+            <li *ngFor="let savingsRecord of lastThreeMonthsSavings">
+              {{ savingsRecord.month }} : ${{ savingsRecord.amount }}
+            </li>
+          </ul>
+        </div>
+        <div class="month">
+          <h3>Current Month</h3>
+          <p>{{ currentMonthSavings }}</p>
+        </div>
+        <button class="button" (click)="onSavings()">View</button>
+      </div>
+    </div>
+  </div>
+</div>
